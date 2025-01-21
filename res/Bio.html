@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="./subpages.css">
+    </head>
+    <body background="./b.jpg">
+        <script src='./funcs.js'></script>
+
+        <h2 class="heads">Mission Agile 11</h2>
+        <h3 class="heads" id="roleID">Biologisches Radar</h3>
+        
+        <div class="main">
+            <div class="block">
+                <p class="fett">Eingabe des Scan-Code:</p>
+
+                <input id="inp" class="output"></input>
+                <br><br>
+                <button id="genCodeBtn" onclick="interpretCode()" class="confirm">
+                    Ergebnisse des Scan-Code abrufen
+                </button>
+                <br><br>
+
+                <p class="fett">Ergebnisse:</p>
+                <p>Aktuelles Feld:</p>
+                <p id="pos" class="output">-</p>
+                <p>Ergebnisse des Scans:</p>
+                <p id="result" class="scroll">-</p>
+            </div>
+
+            <div class="block">
+                <p class="fett">Info Übersicht zu deiner Rolle:</p>
+                <table id="tab">
+                    <tr>
+                        <th>Aktion</th>
+                        <th>Feld</th>
+                        <th>Methode zum Erkenntnisgewinn</th>
+                        <th>Ertrag</th>
+                    </tr>
+                    <tr>
+                        <td>Nach Wasser graben</td>
+                        <td>Unterirdisches Wasservorkommen</td>
+                        <td>Nutzung der Schaufel</td>
+                        <td>wenig</td>
+                    </tr>
+                    <tr>
+                        <td>Pflanze aufsammeln</td>
+                        <td>Pflanze</td>
+                        <td>Nutzung des Greifarms</td>
+                        <td>mittel</td>
+                    </tr>
+                    <tr>
+                        <td>Alien-Abdrücke fotografieren</td>
+                        <td>Alien-Abdrücke</td>
+                        <td>Nutzung der Kamera</td>
+                        <td>hoch</td>
+                    </tr>
+                </table>
+
+                <p class="fett">Scan-Radius des Rovers:</p>
+                <p>Der Rover hat einen 2-Feld großen Radius, in dem die Besonderheiten erkannt werden. Alles außerhalb des Radius ist ungewiss. Bsp:</p>
+                <img src="./scan.png" class="example">
+            </div>
+        </div>
+
+    </body>
+</html>

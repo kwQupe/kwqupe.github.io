@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="control.css">
+    </head>
+    <body background="b.jpg">
+        <script src='./funcs.js'></script>
+
+        <h2 class="heads">Mission Agile 11</h2>
+        <h3 class="heads">Steuerung</h3>
+
+        <div class="main">
+            <div class="block">
+                <p class="fett">Aktuelles Feld:</p>
+                <p id="currentLoc" class="output"></p> 
+                <p class="fett">Punkzahl:</p>
+                <p id="currentPoints" class="output"></p>
+                <p class="fett">Historie:</p>
+                <p id="verlauf" class="scroll"></p>
+                <button onclick="clearStorage()">
+                    Datenreset
+                </button>
+            </div>
+
+            <div class="block">
+                <p class="fett">Eingabe des neuen Koordinatenfeldes:</p> 
+                <div class="inblock">
+                    <p>Neue Spalte:</p> <p id="colOut" class="output">-</p> 
+                    <div class="dropdown">
+                        <button class="dropbtn">Spaltenauswahl</button>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="setCol('A')">A</a>
+                            <a href="#" onclick="setCol('B')">B</a>
+                            <a href="#" onclick="setCol('C')">C</a>
+                            <a href="#" onclick="setCol('D')">D</a>
+                            <a href="#" onclick="setCol('E')">E</a>
+                            <a href="#" onclick="setCol('F')">F</a>
+                            <a href="#" onclick="setCol('G')">G</a>
+                            <a href="#" onclick="setCol('H')">H</a>
+                            <a href="#" onclick="setCol('I')">I</a>
+                            <a href="#" onclick="setCol('J')">J</a>
+                            <a href="#" onclick="setCol('K')">K</a>
+                            <a href="#" onclick="setCol('L')">L</a>
+                            <a href="#" onclick="setCol('M')">M</a>
+                            <a href="#" onclick="setCol('N')">N</a>
+                            <a href="#" onclick="setCol('O')">O</a>
+                            <a href="#" onclick="setCol('P')">P</a>
+                            <a href="#" onclick="setCol('Q')">Q</a>
+                            <a href="#" onclick="setCol('R')">R</a>
+                            <a href="#" onclick="setCol('S')">S</a>
+                            <a href="#" onclick="setCol('T')">T</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inblock">
+                    <p>Neue Zeile:</p> <p id="lineOut" class="output">-</p>
+                    <div class="dropdown">
+                        <button class="dropbtn">Zeilenauswahl</button>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="setLine('01')">01</a>
+                            <a href="#" onclick="setLine('02')">02</a>
+                            <a href="#" onclick="setLine('03')">03</a>
+                            <a href="#" onclick="setLine('04')">04</a>
+                            <a href="#" onclick="setLine('05')">05</a>
+                            <a href="#" onclick="setLine('06')">06</a>
+                            <a href="#" onclick="setLine('07')">07</a>
+                            <a href="#" onclick="setLine('08')">08</a>
+                            <a href="#" onclick="setLine('09')">09</a>
+                            <a href="#" onclick="setLine('10')">10</a>
+                            <a href="#" onclick="setLine('11')">11</a>
+                            <a href="#" onclick="setLine('12')">12</a>
+                            <a href="#" onclick="setLine('13')">13</a>
+                            <a href="#" onclick="setLine('14')">14</a>
+                            <a href="#" onclick="setLine('15')">15</a>
+                            <a href="#" onclick="setLine('16')">16</a>
+                            <a href="#" onclick="setLine('17')">17</a>
+                            <a href="#" onclick="setLine('18')">18</a>
+                            <a href="#" onclick="setLine('19')">19</a>
+                            <a href="#" onclick="setLine('20')">20</a>
+                        </div>
+                    </div>
+                </div>
+                                
+                <br><br>
+
+                <button id="genCodeBtn" onclick="driveAndGenCode()" class="confirm">
+                    Zu neuer Position fahren & Scan-Code erstellen
+                </button>
+
+                <br><br><br>
+
+                <p>Gefahrener Pfad:</p>
+                <p id="pathOut" class="output">-</p>
+                <p>Scan-Code des neuen Feldes:</p>
+                <p id="codeOut" class="output">-</p>
+            </div>
+
+            <div class="block">
+                <p class="fett">Sammeln von Informationen:</p>
+                <p>(Alles wird nur auf das aktuelle Feld angewendet)</p>
+                <p>(Unnötiger Einsatz wird bestraft)</p>
+                <br>
+                <button id="genCodeBtn" class="confirm" onclick="makeTest('arm')">
+                    Nutzung des Greifarms
+                </button><br><br><br>
+                <button id="genCodeBtn" class="confirm" onclick="makeTest('sho')">
+                    Nutzung der Schaufel
+                </button><br><br><br>
+                <button id="genCodeBtn" class="confirm" onclick="makeTest('cam')">
+                    Nutzung der Kamera
+                </button><br><br><br>
+                <button id="genCodeBtn" class="confirm" onclick="makeTest('mes')">
+                    Durchführen einer Vermessung
+                </button><br><br><br>
+            </div>
+        </div>
+    </body>
+</html>
