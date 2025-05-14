@@ -79,7 +79,13 @@ function getFieldFromCoords(x, y){
 }
 
 function clearStorage(){
-    localStorage.clear()
+    var input = document.getElementById('drinp').value
+    if(input === "datareset"){
+        localStorage.clear()
+        document.getElementById('drinp').value = ""
+    } else {
+        document.getElementById('drinp').value = "Nope"
+    }
 }
 
 function addToHistory(text){
